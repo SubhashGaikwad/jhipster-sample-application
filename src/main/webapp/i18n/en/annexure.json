@@ -1,0 +1,27 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "annexure": {
+      "home": {
+        "title": "Annexures",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Annexure",
+        "createOrEditLabel": "Create or edit a Annexure",
+        "notFound": "No Annexures found"
+      },
+      "created": "A new Annexure is created with identifier {{ param }}",
+      "updated": "A Annexure is updated with identifier {{ param }}",
+      "deleted": "A Annexure is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Annexure {{ id }}?"
+      },
+      "detail": {
+        "title": "Annexure"
+      },
+      "id": "ID",
+      "type": "Type",
+      "compliance": "Compliance",
+      "comment": "Comment",
+      "question": "Question"
+    }
+  }
+}

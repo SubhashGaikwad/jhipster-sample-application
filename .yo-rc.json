@@ -43,7 +43,9 @@
     "devServerPort": 4200,
     "clientTheme": "none",
     "clientThemeVariant": "",
-    "reactive": false
+    "reactive": false,
+    "entities": ["Question", "Annexure"],
+    "lastLiquibaseTimestamp": 1631181399000
   },
   "git-provider": "GitHub",
   "git-company": "SubhashGaikwad",

@@ -1,0 +1,50 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="question">
+      <h2 data-cy="questionDetailsHeading"><span jhiTranslate="jhipsterSampleApplicationApp.question.detail.title">Question</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ question.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.question.type">Type</span></dt>
+        <dd>
+          <span>{{ question.type }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.question.subType">Sub Type</span></dt>
+        <dd>
+          <span>{{ question.subType }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.question.sno">Sno</span></dt>
+        <dd>
+          <span>{{ question.sno }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.question.description">Description</span></dt>
+        <dd>
+          <span>{{ question.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.question.annexure">Annexure</span></dt>
+        <dd>
+          <div *ngIf="question.annexure">
+            <a [routerLink]="['/annexure', question.annexure?.id, 'view']">{{ question.annexure?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/question', question.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>
