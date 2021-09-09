@@ -1,0 +1,16 @@
+entity Question{
+	type String
+        subType String
+	sno Double
+	description String
+}
+
+entity Annexure{
+	type String
+	compliance Boolean
+	comment String
+}
+
+relationship OneToMany {
+	Annexure{question(description)} to Question
+}
